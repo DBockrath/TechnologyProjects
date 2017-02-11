@@ -35,7 +35,7 @@ public class PhoneActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone);
 		
-		final TextView out = (TextView)findViewById(R.id.out);
+		final TextView out = (TextView)findViewById(R.id.lv1);
 		final Button b1 = (Button)findViewById(R.id.b1);
 		final Button b2 = (Button)findViewById(R.id.b2);
 		final Button b3 = (Button)findViewById(R.id.b3);
@@ -151,7 +151,6 @@ public class PhoneActivity extends Activity {
 			public void onDestroy() {
 				
 				unregisterReceiver(mReceiver);
-				super.onDestroy();
 				
 			}
 			

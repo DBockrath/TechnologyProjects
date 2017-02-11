@@ -1,16 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-    <TextView
-		android:text=""
-		android:id="@+id/out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-	</TextView>
-	
 	<Button
 		android:id="@+id/b1"
 		android:layout_width="wrap_content"
@@ -19,8 +14,8 @@
 		android:layout_alignParentTop="true"
 		android:layout_marginLeft="30dp"
 		android:layout_marginTop="49dp"
-		android:text="Turn On" />
-	
+		android:text="Turn On"/>
+
 	<Button
 		android:id="@+id/b2"
 		android:layout_width="wrap_content"
@@ -28,8 +23,8 @@
 		android:layout_alignLeft="@+id/b1"
 		android:layout_below="@+id/b1"
 		android:layout_marginTop="27dp"
-		android:text="Discoverable" />
-	
+		android:text="Discoverable"/>
+
 	<Button
 		android:id="@+id/b3"
 		android:layout_width="wrap_content"
@@ -37,8 +32,8 @@
 		android:layout_alignLeft="@+id/b2"
 		android:layout_below="@+id/b2"
 		android:layout_marginTop="28dp"
-		android:text="Turn Off" />
-	
+		android:text="Turn Off"/>
+
 	<Button
 		android:id="@+id/b4"
 		android:layout_width="wrap_content"
@@ -46,6 +41,17 @@
 		android:layout_alignLeft="@+id/b3"
 		android:layout_below="@+id/b3"
 		android:layout_marginTop="28dp"
-		android:text="Scan" />
+		android:text="Scan"/>
+
+	<ListView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/b2"
+		android:layout_marginLeft="28dp"
+		android:id="@+id/lv1"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
+

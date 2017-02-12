@@ -12,6 +12,10 @@ import android.widget.ListView;
 import android. widget.Toast;
 import java.util.ArrayList;
 import java.util.Set;
+import android.bluetooth.BluetoothSocket;
+import android.bluetooth.BluetoothServerSocket;
+import java.util.UUID;
+import android.app.ProgressDialog;
 
 public class PhoneActivity extends Activity {
 	
@@ -32,13 +36,18 @@ public class PhoneActivity extends Activity {
 		b3 = (Button) findViewById(R.id.b3);
 		b4 = (Button) findViewById(R.id.b4);
 		
+		UUID appUUID = UUID.fromString("05683628-4936-2146-F8R8JE89V203");
+		ProgressDialog mBluetoothConnectProgressDialogue;
+		BluetoothSocket mBluetoothSocket;
+		BluetoothDevice mBluetoothDevice;
+		
 		BA = BluetoothAdapter.getDefaultAdapter();
 		lv1 = (ListView)findViewById(R.id.lv1);
 		lv2 = (ListView)findViewById(R.id.lv2);
 		
 		adapter = new ArrayAdapter<>(this, android.R.layout.activity_list_item, this.items);
-		
 		lv1.setAdapter(adapter);
+		
 	}
 	
 	public void on(View v) {
@@ -74,17 +83,27 @@ public class PhoneActivity extends Activity {
 	public void list(View v) {
 		
 		ArrayList<String> list = new ArrayList<>();
+		ArrayList<String> list2 = new ArrayList<>();
 		
 		for(BluetoothDevice bt : BA.getBondedDevices())
-			this.items.add(bt.getName());
+		this.items.add(bt.getName());
 		this.adapter.notifyDataSetChanged();
-		Toast.makeText(getApplicationContext(), "Showing Paired Devices", Toast.LENGTH_SHORT).show();
 		
 	}
 	
 	public void connect(View v) {
 		
+		String address = BA.getAddress();
 		
+		
+		if (address != "68:c4:4d:a7:2d:9d") {
+			
+			BA.disable();
+			System.out.println("You cannot connect to this device");
+			
+		} else {
+			
+		}
 		
 	}
 	

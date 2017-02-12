@@ -19,6 +19,7 @@ public final class R {
         public static final int b3=0x7f070002;
         public static final int b4=0x7f070003;
         public static final int lv1=0x7f070004;
+        public static final int lv2=0x7f070005;
     }
     public static final class layout {
         public static final int activity_phone=0x7f030000;

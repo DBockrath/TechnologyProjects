@@ -18,7 +18,9 @@ public class PhoneActivity extends Activity {
 	Button b1, b2, b3, b4;
 	private BluetoothAdapter BA;
 	private Set<BluetoothDevice>pairedDevices;
-	ListView lv;
+	private ArrayList<String> items = new ArrayList<>();
+	private ArrayAdapter<String> adapter;
+	ListView lv1, lv2;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,12 @@ public class PhoneActivity extends Activity {
 		b4 = (Button) findViewById(R.id.b4);
 		
 		BA = BluetoothAdapter.getDefaultAdapter();
-		lv = (ListView)findViewById(R.id.lv1);
+		lv1 = (ListView)findViewById(R.id.lv1);
+		lv2 = (ListView)findViewById(R.id.lv2);
 		
+		adapter = new ArrayAdapter<>(this, android.R.layout.activity_list_item, this.items);
+		
+		lv1.setAdapter(adapter);
 	}
 	
 	public void on(View v) {
@@ -69,13 +75,12 @@ public class PhoneActivity extends Activity {
 	public void list(View v) {
 		
 		pairedDevices = BA.getBondedDevices();
-		ArrayList list = new ArrayList();
+		ArrayList<String> list = new ArrayList<>();
 		
-		for(BluetoothDevice bt : pairedDevices) list.add(bt.getName());
+		for(BluetoothDevice bt : pairedDevices)
+			this.items.add(bt.getName());
+		this.adapter.notifyDataSetChanged();
 		Toast.makeText(getApplicationContext(), "Showing Paired Devices", Toast.LENGTH_SHORT).show();
-		
-		final ArrayAdapter adapter = new ArrayAdapter(this,android.R.simple_list_item_1, list);
-		lv.setAdapter(adapter);
 		
 	}
 	

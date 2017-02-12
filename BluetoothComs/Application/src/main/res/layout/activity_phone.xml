@@ -49,9 +49,37 @@
 		android:layout_toRightOf="@id/b2"
 		android:layout_marginLeft="28dp"
 		android:id="@+id/lv1"
-		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginBottom="290dp"
+		android:layout_marginTop="50dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:text="Paired Devices:"
 		android:layout_alignParentTop="true"
-		android:layout_alignParentRight="true"/>
+		android:layout_alignLeft="@+id/lv1"
+		android:minHeight="50dp"
+		android:minWidth="200dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:text="Available Devices:"
+		android:minHeight="50dp"
+		android:layout_marginTop="400dp"
+		android:layout_marginLeft="162dp"
+		android:minWidth="200dp"/>
+
+	<ListView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginLeft="162dp"
+		android:layout_marginTop="450dp"/>
 
 </RelativeLayout>
 

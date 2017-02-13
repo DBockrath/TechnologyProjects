@@ -36,7 +36,6 @@ public class PhoneActivity extends Activity {
 		b3 = (Button) findViewById(R.id.b3);
 		b4 = (Button) findViewById(R.id.b4);
 		
-		UUID appUUID = UUID.fromString("05683628-4936-2146-F8R8JE89V203");
 		ProgressDialog mBluetoothConnectProgressDialogue;
 		BluetoothSocket mBluetoothSocket;
 		BluetoothDevice mBluetoothDevice;
@@ -66,7 +65,7 @@ public class PhoneActivity extends Activity {
 		
 	}
 	
-	public void off(View v) {
+	/* public void off(View v) {
 		
 		BA.disable();
 		Toast.makeText(getApplicationContext(), "Turned Off", Toast.LENGTH_LONG).show();
@@ -105,6 +104,6 @@ public class PhoneActivity extends Activity {
 			
 		}
 		
-	}
+	} */
 	
 }

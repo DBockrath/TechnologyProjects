@@ -17,9 +17,9 @@
 		android:resizeableActivity="true">
 
 		<activity
-			android:name=".AppsListActivity"
+			android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
 			android:label="MyyLthemeandroidstyle"
-			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 
@@ -35,6 +35,12 @@
 					android:name="android.intent.category.DEFAULT"/>
 
 			</intent-filter>
+
+		</activity>
+
+		<activity
+			android:name="com.DTMSoundMaster.MyLauncher.AppsListActivity"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
 		</activity>
 

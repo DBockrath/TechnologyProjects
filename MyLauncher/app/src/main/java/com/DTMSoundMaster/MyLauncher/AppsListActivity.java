@@ -1,4 +1,4 @@
-/* package com.DTMSoundMaster.MyLauncher;
+package com.DTMSoundMaster.MyLauncher;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -112,4 +112,4 @@ public class AppsListActivity extends Activity {
 		
 	}
 	
-} */
+}

@@ -16,9 +16,10 @@ public final class R {
     public static final class id {
         public static final int apps_button=0x7f060001;
         public static final int apps_list=0x7f060000;
-        public static final int item_app_icon=0x7f060002;
-        public static final int item_app_label=0x7f060003;
-        public static final int item_app_name=0x7f060004;
+        public static final int enter_input=0x7f060002;
+        public static final int item_app_icon=0x7f060003;
+        public static final int item_app_label=0x7f060004;
+        public static final int item_app_name=0x7f060005;
     }
     public static final class layout {
         public static final int activity_apps_list=0x7f030000;

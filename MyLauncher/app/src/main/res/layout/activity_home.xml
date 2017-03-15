@@ -14,21 +14,17 @@
 		android:layout_alignParentTop="true"
 		android:layout_marginRight="10dp"
 		android:layout_marginTop="10dp"
-		android:text="Show Apps"
-		android:onClick="showApps"/>
+		android:text="Show Apps" />
 
-	<TextView
+	<EditView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_centerHorizontal="true"
-		android:layout_centerVertical="true"
-		android:text="Enter Action"
 		android:layout_alignParentTop="true"
 		android:layout_alignParentBottom="true"
 		android:layout_alignParentLeft="true"
 		android:layout_toLeftOf="@id/apps_button"
-		android:textColor="#05B218"
-		android:layout_marginRight="10dp"/>
+		android:layout_marginRight="10dp"
+		android:id="@+id/user_input"/>
 
 	<Button
 		android:layout_height="wrap_content"
@@ -38,7 +34,7 @@
 		android:layout_alignParentBottom="true"
 		android:layout_marginRight="10dp"
 		android:layout_marginBottom="10dp"
-		android:id="@+id/enter_input"/>
+		android:id="@+id/enter_input" />
 
 </RelativeLayout>
 

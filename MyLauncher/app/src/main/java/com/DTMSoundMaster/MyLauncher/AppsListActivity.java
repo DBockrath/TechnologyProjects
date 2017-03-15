@@ -55,7 +55,7 @@ public class AppsListActivity extends Activity {
 		
 	}
 	
-	public void home() {
+	protected void home() {
 		
 		setContentView(R.layout.activity_home);
 		

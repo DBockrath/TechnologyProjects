@@ -45,5 +45,16 @@
 		android:id="@+id/text_field_1"
 		android:textColor="#159500"/>
 
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Enter"
+		android:layout_below="@id/apps_button"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:background="#000000"
+		android:textColor="#159500"
+		android:id="@+id/enter_button"/>
+
 </RelativeLayout>
 

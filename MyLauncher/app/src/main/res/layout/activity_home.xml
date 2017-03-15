@@ -1,18 +1,49 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".HomeActivity"
+	android:background="#000000">
 
-    <Button
-        android:id="@+id/apps_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Show Apps"
-        android:onClick="showApps" />
+	<Button
+		android:id="@+id/apps_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="10dp"
+		android:text="Show Apps"
+		android:onClick="showApps"
+		android:textColor="#159500"
+		android:background="#000000"/>
+
+	<EditText
+		android:id="@+id/user_input_field"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:inputType="text|textAutoComplete|textLongMessage"
+		android:layout_marginRight="114dp"
+		android:layout_marginBottom="100dp"
+		android:background="#000000"
+		android:textColor="#159500"
+		android:text="enteraction#:">
+
+		<requestFocus/>
+
+	</EditText>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginBottom="10dp"
+		android:maxWidth="200dp"
+		android:id="@+id/text_field_1"
+		android:textColor="#159500"/>
 
 </RelativeLayout>
+

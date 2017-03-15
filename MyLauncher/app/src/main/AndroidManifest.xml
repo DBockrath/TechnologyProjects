@@ -10,7 +10,7 @@
 		android:resizeableActivity = "true">
         <activity
             android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
-            android:label="MyyLthemeandroidstyle"
+            android:label="MyLauncher"
 			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true" >

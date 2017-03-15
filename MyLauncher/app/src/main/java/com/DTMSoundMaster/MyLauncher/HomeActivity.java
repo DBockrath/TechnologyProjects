@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.Button;
-import android.view.View.OnClickListener;
 
 public class HomeActivity extends Activity {
 
@@ -20,8 +17,8 @@ public class HomeActivity extends Activity {
 		
 	public void showApps(View v) {
 		
-		Intent a = new Intent(this, AppsListActivity.class);
-		startActivity(a);
+		Intent i = new Intent(this, AppsListActivity.class);
+		startActivity(i);
 
 	}
 	

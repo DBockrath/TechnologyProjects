@@ -103,7 +103,7 @@ public class AppsListActivity extends Activity {
 		
 	}
 	
-	public void home() {
+	public void home(View v) {
 		
 		Intent h = new Intent(this, HomeActivity.class);
         startActivity(h);

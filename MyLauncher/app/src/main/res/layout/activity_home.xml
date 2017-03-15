@@ -54,7 +54,8 @@
 		android:layout_marginRight="10dp"
 		android:background="#000000"
 		android:textColor="#159500"
-		android:id="@+id/enter_button"/>
+		android:id="@+id/enter_button"
+		android:onClick="enter" />
 
 </RelativeLayout>
 

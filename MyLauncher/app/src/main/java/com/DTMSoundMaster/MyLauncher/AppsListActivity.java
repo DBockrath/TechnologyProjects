@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.AdapterView;
+import android.view.View.OnClickListener;
 
 public class AppsListActivity extends Activity {
 	
@@ -52,12 +53,6 @@ public class AppsListActivity extends Activity {
 			apps.add(app);
 			
 		}
-		
-	}
-	
-	protected void home() {
-		
-		setContentView(R.layout.activity_home);
 		
 	}
 	

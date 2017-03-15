@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 
 public class HomeActivity extends Activity {
-	
-	private Intent i = new Intent(this, AppsListActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +19,15 @@ public class HomeActivity extends Activity {
     }
 		
 	public void showApps(View v) {
-
-		startActivity(i);
+		
+		Intent a = new Intent(this, AppsListActivity.class);
+		startActivity(a);
 
 	}
 	
 	public void enter() {
 		
-		EditText mEdit = (EditText)findViewById(R.id.user_input);
-		mEdit.getText().toString();
+		
 		
 	}
 

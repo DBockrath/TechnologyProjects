@@ -37,9 +37,9 @@ public class HomeActivity extends Activity {
 		mText = (TextView)findViewById(R.id.text_field_1);
 		mText.setText(mtext);
 		
-		if (medit.equals("showapps")) {
+		if (medit.equals("addstring")) {
 			
-			Intent i = new Intent(this, AppsListActivity.class);
+			Intent i = new Intent(this, AddString.class);
 			startActivity(i);
 			
 		} else {

@@ -16,7 +16,8 @@ public class HomeActivity extends Activity {
 	}
 
     public void showApps(View v){
-        Intent i = new Intent(this, AppsListActivity.class);
+        
+		Intent i = new Intent(this, AppsListActivity.class);
         startActivity(i);
     
 	}

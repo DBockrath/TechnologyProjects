@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.DTMSoundMaster.MyLauncher" >
 	
+	<application>
+	
         <activity
             android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
 			android:label="My Launcher"
@@ -24,5 +26,7 @@
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             
 		</activity>
+		
+	</application>
 
 </manifest>

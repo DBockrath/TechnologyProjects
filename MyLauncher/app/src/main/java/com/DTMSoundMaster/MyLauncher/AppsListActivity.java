@@ -55,6 +55,12 @@ public class AppsListActivity extends Activity {
 		
 	}
 	
+	public void home() {
+		
+		setContentView(R.layout.activity_home);
+		
+	}
+	
 	private void loadListView() {
 		
 		list = (ListView)findViewById(R.id.apps_list);

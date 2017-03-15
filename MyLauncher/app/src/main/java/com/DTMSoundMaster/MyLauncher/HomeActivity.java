@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class HomeActivity extends Activity {
 	
-	String mtext;
-	String medit;
+	static String mtext;
+	static String medit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +35,19 @@ public class HomeActivity extends Activity {
 		
 		TextView mText;
 		mText = (TextView)findViewById(R.id.text_field_1);
-		mText.setText(mtext);
 		
-		if (medit.equals("addstring")) {
+		if (medit.equals("showapps")) {
 			
-			Intent i = new Intent(this, AddString.class);
+			Intent i = new Intent(this, AppsListActivity.class);
 			startActivity(i);
+			
+			mtext = null;
+			mText.setText(mtext);
 			
 		} else {
 			
 			mtext = "Not A Valid Input";
+			mText.setText(mtext);
 			
 		}
 		

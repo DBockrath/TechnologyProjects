@@ -45,10 +45,11 @@ public class HomeActivity extends Activity {
 			mText.setText(mtext);
 			
 		} else {
-			
+
 			mtext = "Not A Valid Input";
 			mText.setText(mtext);
-			
+
+		
 		}
 		
 	}

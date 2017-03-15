@@ -14,7 +14,7 @@
 		<activity
 			android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
 			android:label="My Launcher"
-			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true">
 

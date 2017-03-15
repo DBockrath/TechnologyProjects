@@ -11,51 +11,51 @@
 		android:id="@+id/apps_button"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_alignParentRight="true"
 		android:layout_alignParentTop="true"
 		android:layout_marginRight="10dp"
 		android:layout_marginTop="10dp"
 		android:text="Show Apps"
 		android:onClick="showApps"
-		android:textColor="#159500"
-		android:background="#000000"/>
+		android:textColor="#159500"/>
 
 	<EditText
 		android:id="@+id/user_input_field"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_height="wrap_content"
 		android:inputType="text|textAutoComplete|textLongMessage"
-		android:layout_marginRight="114dp"
 		android:layout_marginBottom="100dp"
 		android:background="#000000"
 		android:textColor="#159500"
-		android:text="enteraction#:">
+		android:typeface="serif"
+		android:hint="enteraction#:"
+		android:textColorHint="#159500"
+		android:layout_below="@id/apps_button"
+		android:minHeight="100dp">
 
 		<requestFocus/>
 
 	</EditText>
 
 	<TextView
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
-		android:layout_alignParentLeft="true"
 		android:layout_marginBottom="10dp"
 		android:maxWidth="200dp"
 		android:id="@+id/text_field_1"
-		android:textColor="#159500"/>
+		android:textColor="#159500"
+		android:textSize="20sp"/>
 
 	<Button
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="Enter"
-		android:layout_below="@id/apps_button"
 		android:layout_alignParentRight="true"
 		android:layout_marginRight="10dp"
-		android:background="#000000"
 		android:textColor="#159500"
 		android:id="@+id/enter_button"
-		android:onClick="enter" />
+		android:onClick="enter"
+		android:layout_marginTop="10dp"/>
 
 </RelativeLayout>
 

@@ -105,8 +105,8 @@ public class AppsListActivity extends Activity {
 	
 	public void home(View v) {
 		
-		Intent h = new Intent(this, HomeActivity.class);
-        startActivity(h);
+		Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
 		
 	}
 

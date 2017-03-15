@@ -27,7 +27,6 @@
 		android:layout_marginRight="10dp"
 		android:onClick="home"
 		android:id="@+id/home_button_1"
-		android:background="#000000"
 		android:textColor="#159500"/>
 
 </RelativeLayout>

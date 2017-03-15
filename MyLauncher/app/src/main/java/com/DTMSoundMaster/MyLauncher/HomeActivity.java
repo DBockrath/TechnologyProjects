@@ -42,6 +42,10 @@ public class HomeActivity extends Activity {
 			Intent i = new Intent(this, AppsListActivity.class);
 			startActivity(i);
 			
+		} else {
+			
+			mtext = "Not A Valid Input";
+			
 		}
 		
 	}

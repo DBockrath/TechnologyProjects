@@ -18,12 +18,12 @@ public class HomeActivity extends Activity {
 
     }
 		
-	public void showApps(View v) {
+	// public void showApps(View v) {
 		
-		Intent a = new Intent(this, AppsListActivity.class);
-		startActivity(a);
+		// Intent a = new Intent(this, AppsListActivity.class);
+		// startActivity(a);
 
-	}
+	// }
 	
 	public void enter() {
 		

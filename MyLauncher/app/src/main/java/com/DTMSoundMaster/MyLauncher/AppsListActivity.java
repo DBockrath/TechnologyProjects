@@ -102,5 +102,12 @@ public class AppsListActivity extends Activity {
 		});
 		
 	}
+	
+	public void home() {
+		
+		Intent h = new Intent(this, HomeActivity.class);
+        startActivity(h);
+		
+	}
 
 }

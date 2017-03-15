@@ -11,7 +11,7 @@
         <activity
             android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
             android:label="MyLauncher"
-			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
 			android:launchMode="singleTask"
 			android:stateNotNeeded="true" >
             <intent-filter>
@@ -20,6 +20,10 @@
 				<category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+		<activity
+			android:name="com.DTMSoundMaster.MyLauncher.AppsListActivity"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+		</activity>
     </application>
 
 </manifest>

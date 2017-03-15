@@ -9,39 +9,33 @@
 		android:minSdkVersion="14"
 		android:targetSdkVersion="21"/>
 
-	<application
-		android:allowBackup="true"
-		android:icon="@drawable/ic_launcher">
+	<activity
+		android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
+		android:label="My Launcher"
+		android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+		android:launchMode="singleTask"
+		android:stateNotNeeded="true">
 
-		<activity
-			android:name="com.DTMSoundMaster.MyLauncher.HomeActivity"
-			android:label="My Launcher"
-			android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
-			android:launchMode="singleTask"
-			android:stateNotNeeded="true">
+		<intent-filter>
 
-			<intent-filter>
+			<action
+				android:name="android.intent.action.MAIN"/>
 
-				<action
-					android:name="android.intent.action.MAIN"/>
+			<category
+				android:name="android.intent.category.HOME"/>
 
-				<category
-					android:name="android.intent.category.HOME"/>
+			<category
+				android:name="android.intent.category.DEFAULT"/>
 
-				<category
-					android:name="android.intent.category.DEFAULT"/>
+		</intent-filter>
 
-			</intent-filter>
+	</activity>
 
-		</activity>
+	<activity
+		android:name="com.DTMSoundMaster.MyLauncher.AppsListActivity"
+		android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
-		<activity
-			android:name="com.DTMSoundMaster.MyLauncher.AppsListActivity"
-			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
-		</activity>
-
-	</application>
+	</activity>
 
 </manifest>
 

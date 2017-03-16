@@ -33,12 +33,6 @@
 
 		</activity>
 
-		<activity
-			android:name="com.DTMSoundMaster.MyLauncher.AppsListActivity"
-			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
-		</activity>
-
 	</application>
 
 </manifest>

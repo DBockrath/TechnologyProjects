@@ -7,30 +7,18 @@
 	tools:context=".HomeActivity"
 	android:background="#000000">
 
-	<Button
-		android:id="@+id/apps_button"
-		android:layout_alignParentTop="true"
-		android:layout_marginRight="10dp"
-		android:layout_marginTop="10dp"
-		android:text="Show Apps"
-		android:onClick="showApps"
-		android:textColor="#159500"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"/>
-
 	<EditText
 		android:id="@+id/user_input_field"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:inputType="text|textAutoComplete|textLongMessage"
-		android:layout_marginBottom="100dp"
+		android:layout_height="100dp"
+		android:inputType="text|textLongMessage"
 		android:background="#000000"
-		android:textColor="#159500"
+		android:textColor="#727272"
 		android:typeface="serif"
 		android:hint="enteraction#:"
-		android:textColorHint="#159500"
-		android:layout_below="@id/apps_button"
-		android:minHeight="100dp">
+		android:textColorHint="#727272"
+		android:gravity="top"
+		android:layout_marginRight="100dp">
 
 		<requestFocus/>
 
@@ -39,23 +27,27 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_marginBottom="10dp"
 		android:maxWidth="200dp"
 		android:id="@+id/text_field_1"
-		android:textColor="#159500"
-		android:textSize="20sp"/>
+		android:textColor="#727272"
+		android:textSize="20sp"
+		android:layout_below="@id/user_input_field"/>
 
 	<Button
 		android:text="Enter"
 		android:layout_alignParentRight="true"
-		android:layout_marginRight="10dp"
-		android:textColor="#159500"
+		android:textColor="#727272"
 		android:id="@+id/enter_button"
 		android:onClick="enter"
-		android:layout_marginTop="10dp"
+		android:layout_height="100dp"
+		android:layout_width="100dp"
+		android:background="#0C002A"/>
+
+	<ListView
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"/>
+		android:layout_width="wrap_content"
+		android:layout_below="@id/text_field_1"
+		android:id="@+id/apps_list"/>
 
 </RelativeLayout>
 

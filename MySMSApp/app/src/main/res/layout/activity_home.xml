@@ -19,7 +19,7 @@
 		android:layout_marginRight="20dp"
 		android:layout_marginBottom="20dp"
 		android:id="@+id/new_message_button"
-		android:onClick="new" />
+		android:onClick="newMessage" />
 
 </RelativeLayout>
 

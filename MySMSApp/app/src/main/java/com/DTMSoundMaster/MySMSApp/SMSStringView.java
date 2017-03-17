@@ -13,7 +13,7 @@ import android.content.BroadcastReceiver;
 import android.content.IntentFilter;
 import android.content.Context;
 
-public class SMS extends Activity {
+public class SMSStringView extends Activity {
 	
 	Button btnSendSMS;
 	EditText txtPhoneNo;

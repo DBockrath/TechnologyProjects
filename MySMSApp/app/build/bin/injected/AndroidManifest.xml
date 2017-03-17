@@ -14,7 +14,7 @@
 		android:label="@string/app_name">
 
 		<activity
-			android:name=".SMS"
+			android:name=".SMSHomeActivity"
 			android:label="@string/app_name">
 
 			<intent-filter>
@@ -30,7 +30,7 @@
 		</activity>
 
 		<receiver
-			android:name=".SmsReceiver">
+			android:name=".SMSMessageReceiver">
 
 			<intent-filter>
 

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.telephony.gsm.SmsMessage;
 import android.widget.*;
 
-public class SmsReceiver extends BroadcastReceiver {
+public class SMSMessageReceiver extends BroadcastReceiver {
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {

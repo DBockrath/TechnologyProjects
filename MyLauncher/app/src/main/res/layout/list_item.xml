@@ -18,7 +18,8 @@
 		android:layout_height="wrap_content"
 		android:layout_toRightOf="@+id/item_app_icon"
 		android:paddingLeft="10dp"
-		android:textColor="#727272"/>
+		android:textColor="#929292"
+		android:textStyle="bold"/>
 
 	<TextView
 		android:id="@+id/item_app_name"

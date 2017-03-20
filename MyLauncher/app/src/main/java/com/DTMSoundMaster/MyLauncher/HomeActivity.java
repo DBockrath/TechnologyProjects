@@ -15,6 +15,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.AdapterView;
 import android.view.ViewGroup;
+import android.util.Log;
+import android.net.Uri;
+import android.graphics.Bitmap;
+import java.io.InputStream;
+import android.provider.ContactsContract;
+import android.content.ContentUris;
+import android.graphics.BitmapFactory;
+import java.io.IOException;
+import android.database.Cursor;
 
 public class HomeActivity extends Activity {
 	
@@ -28,6 +37,87 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
     
 	}
+	
+	private static final String TAG = HomeActivity.class.getSimpleName();
+    private static final int REQUEST_CODE_PICK_CONTACTS = 1;
+    private Uri uriContact;
+    private String contactID;
+
+
+    
+    public void onClickSelectContact(View btnSelectContact) {
+
+        startActivityForResult(new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI), REQUEST_CODE_PICK_CONTACTS);
+		
+    }
+
+    private void retrieveContactPhoto() {
+
+        Bitmap photo = null;
+
+        try {
+            
+			InputStream inputStream = ContactsContract.Contacts.openContactPhotoInputStream(getContentResolver(), ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, new Long(contactID)));
+
+            if (inputStream != null) {
+                photo = BitmapFactory.decodeStream(inputStream);
+                ImageView imageView = (ImageView) findViewById(R.id.item_app_icon);
+                imageView.setImageBitmap(photo);
+            }
+
+            assert inputStream != null;
+            inputStream.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void retrieveContactNumber() {
+
+        String contactNumber = null;
+        Cursor cursorID = getContentResolver().query(uriContact, new String[]{ContactsContract.Contacts._ID}, null, null, null);
+
+        if (cursorID.moveToFirst()) {
+
+            contactID = cursorID.getString(cursorID.getColumnIndex(ContactsContract.Contacts._ID));
+			
+        }
+
+        cursorID.close();
+
+        Log.d(TAG, "Contact ID: " + contactID);
+
+        Cursor cursorPhone = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, new String[]{ContactsContract.CommonDataKinds.Phone.NUMBER}, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ? AND " + ContactsContract.CommonDataKinds.Phone.TYPE + " = " + ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE, new String[]{contactID}, null);
+
+        if (cursorPhone.moveToFirst()) {
+            
+			contactNumber = cursorPhone.getString(cursorPhone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+			
+        }
+
+        cursorPhone.close();
+
+        
+    }
+
+    private void retrieveContactName() {
+
+        String contactName = null;
+
+        Cursor cursor = getContentResolver().query(uriContact, null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+
+            contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+        }
+
+        cursor.close();
+
+        Log.d(TAG, "Contact Name: " + contactName);
+
+    }
 	
 	private PackageManager manager;
 	private List<AppDetail> apps; 
@@ -65,6 +155,7 @@ public class HomeActivity extends Activity {
 			public View getView(int position, View convertView, ViewGroup parent) {
 
 				if(convertView == null){
+					
 					convertView = getLayoutInflater().inflate(R.layout.list_item, null);
 
 				}
@@ -115,9 +206,6 @@ public class HomeActivity extends Activity {
 		
 		if (medit.equals("showapps")) {
 			
-			Intent i = new Intent(this, HomeActivity.class);
-			startActivity(i);
-			
 			mtext = "Showing All Apps";
 			mText.setText(mtext);
 			
@@ -125,15 +213,19 @@ public class HomeActivity extends Activity {
 			loadListView();
 			addClickListener();
 			
-		} else {
-
-			mtext = "Not A Valid Input";
+		}
+		
+		if (medit.equals("showcontacts")) {
+			
+			mtext = "Showing All Contacts";
 			mText.setText(mtext);
 			
-            list.setAdapter(null);
-		
+			retrieveContactName();
+            retrieveContactNumber();
+            retrieveContactPhoto();
+			
 		}
 		
 	}
-	
+		
 }

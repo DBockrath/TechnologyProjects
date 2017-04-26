@@ -26,7 +26,7 @@
 		android:layout_width="100dp"
 		android:text="Send"
 		android:id="@+id/btnSendSMS"
-		android:minHeight="150dp"
+		android:minHeight="75dp"
 		android:layout_alignParentRight="true"
 		android:layout_alignParentBottom="true"/>
 
@@ -36,6 +36,15 @@
 		android:layout_below="@id/txtPhoneNo"
 		android:layout_marginBottom="150dp"
 		android:id="@+id/message_field"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Attach File"
+		android:layout_above="@id/btnSendSMS"
+		android:layout_alignParentRight="true"
+		android:minWidth="100dp"
+		android:minHeight="75dp"/>
 
 </RelativeLayout>
 

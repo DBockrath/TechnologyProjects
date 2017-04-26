@@ -19,7 +19,9 @@
 					
             </intent-filter>
 			
-        </activity>
+		</activity>
+		
+		<activity android:name="SMSStringView" />
 		
 		<receiver android:name=".SMSMessageReceiver" >
 			

@@ -23,7 +23,7 @@ public class SMSStringView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 		
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.messaging_view);
 		
 		btnSendSMS = (Button)findViewById(R.id.btnSendSMS);
 		txtPhoneNo = (EditText)findViewById(R.id.txtPhoneNo);

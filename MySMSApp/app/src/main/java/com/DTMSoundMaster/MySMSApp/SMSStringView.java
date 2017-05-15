@@ -52,6 +52,8 @@ public class SMSStringView extends Activity {
 		
     }
 	
+	
+	
 	public void sendSMS(String phoneNumber, String message) {
 		
 		String SENT = "SMS_SENT";
